@@ -2,7 +2,7 @@ pipeline{
 	agent any
         tools {
         maven 'Maven 3.6.2',
-	docker 'Docker' 
+	docker 'Docker 19.03.4' 
     }
  stages {
         stage('Testing Environment') {
