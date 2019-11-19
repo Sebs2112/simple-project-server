@@ -12,8 +12,8 @@ pipeline{
             }
         stage('Build') {
             steps {
-		                  sh 'mvn package -DskipTests'
-                  sh 'docker build -t="shahe/simple-project:latest" .'
+		         sh 'mvn package -DskipTests'
+                 	 sh 'docker build -t="sebs2112/simple-project:latest" .'
                 }
             }
         stage('Deploy') {
