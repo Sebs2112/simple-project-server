@@ -1,12 +1,10 @@
 pipeline{
 	agent any
-  tools {
-    maven "Apache Maven 3.6.2"
-  }   
+    
  stages {
         stage('Testing Environment') {
             steps {
-                    sh 'mvn test -Dtest=ControllerAndServiceSuite'
+                    sh mvn test -Dtest=ControllerAndServiceSuite
                 }
             }
         stage('Build') {
