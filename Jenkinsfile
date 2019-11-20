@@ -1,3 +1,4 @@
+
 pipeline{
         agent any
 
@@ -12,16 +13,24 @@ pipeline{
                 }
             }
             stage("test"){
-                echo "test"
+                steps{
+                    echo "test"
+                }
             }
             stage("build"){
-                echo "build"
+                steps{
+                  echo "build"
+                }
             }
             stage("Deploy"){
-                echo "deploy"
+                steps{
+                  echo "deploy"
+                }
             }
             stage("Testing env"){
-                echo "test env"
+                steps{
+                  echo "test env"
+                }
             }
             stage("Staging"){
                 when{
@@ -45,4 +54,3 @@ pipeline{
           }
       }
 }
-
