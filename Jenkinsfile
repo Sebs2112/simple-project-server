@@ -11,8 +11,21 @@ pipeline{
 	stage('Testing env'){
 	}
 	stage('Staging'){
+		when{
+			expression{
+				env.BRANCH_NAME == 'developer'
+			}
+		}
+		steps{echo "staging"}
 	}
 	stage('Production'){
-	}
+	when{
+	expression{
+		env.BRANCH_NAME == 'master'
+}
+}steps{
+echo "production"
+}	
+}
 }}
 
